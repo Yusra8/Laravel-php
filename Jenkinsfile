@@ -26,11 +26,11 @@ pipeline {
         stage('Clean') {
             steps {
               sh '''
-		        docker compose down
-	                docker stop laravel-container || true
-		        docker rm laravel-container || true
-		        docker rmi bassam2080/laravel-php || true
-		        docker build -t bassam2080/laravel-php .
+		      //  docker compose down
+	               // docker stop laravel-container || true
+		       // docker rm laravel-container || true
+		      //  docker rmi bassam2080/laravel-php || true
+		     //   
                              
 		        '''
             }
