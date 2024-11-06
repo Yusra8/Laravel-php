@@ -18,17 +18,21 @@ pipeline {
 		        docker rm laravel-container || true
 		        docker rmi bassam2080/laravel-php || true
 		        docker build -t bassam2080/laravel-php .
-            docker compose up -d
+                        docker compose up -d
 		        docker push bassam2080/laravel-php
 		        '''
             }
         }
-        stage('Run Dockercompose playbook') {
+        stage('Clean') {
             steps {
-                sh """
-                cd laravel-app
-                ansible-playbook playbook-dcompose.yml 
-                """
+              sh '''
+		        docker compose down
+	                docker stop laravel-container || true
+		        docker rm laravel-container || true
+		        docker rmi bassam2080/laravel-php || true
+		        docker build -t bassam2080/laravel-php .
+                             
+		        '''
             }
         }
     }
