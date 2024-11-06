@@ -4,7 +4,7 @@ services:
   web:
     build: .
     volumes: 
-      - ./site:/var/www/html
+      - ./myapp:/var/www/html
     ports:  
       - "80:80"  
 
