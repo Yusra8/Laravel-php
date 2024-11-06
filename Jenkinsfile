@@ -23,16 +23,17 @@ pipeline {
 		        '''
             }
         }
-        stage('Clean') {
-            steps {
-              sh '''
+	      //sh '''
 		      //  docker compose down
 	               // docker stop laravel-container || true
 		       // docker rm laravel-container || true
 		      //  docker rmi bassam2080/laravel-php || true
 		     //   
                              
-		        '''
+		//        '''
+        stage('Clean') {
+            steps {
+             echo "hi"
             }
         }
     }
