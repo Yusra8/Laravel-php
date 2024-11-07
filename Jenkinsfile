@@ -1,9 +1,5 @@
 pipeline {
-    agent { docker{ 
-	    image 'docker:latest'  // Use the official Docker image
-            args '-v /var/run/docker.sock:/var/run/docker.sock' // Allow Docker commands within the container
-		}
-	  }
+    agent any
 	
     environment {
 		DOCKERHUB_CREDENTIALS=credentials('Docker_Hub')
