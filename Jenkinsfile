@@ -13,7 +13,7 @@ pipeline {
         stage('Build & push Dockerfile') {
             steps {
                   sh '''
-		        chmod -r 777
+		        chmod -r . 777
 		        docker stop laravel-container || true
 		        docker rm laravel-container || true
 		        docker rmi Yusra8/laravel-php || true
