@@ -16,10 +16,10 @@ pipeline {
 		       
 		        docker stop laravel-container || true
 		        docker rm laravel-container || true
-		        docker rmi bassam2080/laravel-php || true
-		        docker build -t bassam2080/laravel-php .
+		        docker rmi Yusra8/laravel-php || true
+		        docker build -t Yusra8/laravel-php .
                         docker compose up -d
-		        docker push bassam2080/laravel-php
+		        docker push Yusra8/laravel-php
 		        '''
             }
         }
@@ -27,7 +27,7 @@ pipeline {
 		      //  docker compose down
 	               // docker stop laravel-container || true
 		       // docker rm laravel-container || true
-		      //  docker rmi bassam2080/laravel-php || true
+		      //  docker rmi Yusra8/laravel-php || true
 		     //   
                              
 		//        '''
