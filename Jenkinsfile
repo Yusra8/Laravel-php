@@ -19,7 +19,7 @@ pipeline {
 		        docker rmi Yusra8/laravel-php || true
 		        docker build -t Yusra8/laravel-php .
                         docker compose up -d
-			echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
 		       // docker push Yusra8/laravel-php
 		        '''
             }
